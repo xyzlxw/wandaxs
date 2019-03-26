@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*- 
+﻿# -*- coding:utf-8 -*- 
 
 import requests
 from bs4 import BeautifulSoup
@@ -61,7 +61,10 @@ def get_text(tid):
 
     
 if __name__ == "__main__":
-  get_text(47512)
+  id = 47512
+  if len(sys.argv) > 1:
+    id = int(str(sys.argv[1]))
+  get_text(id)
 
   
   
